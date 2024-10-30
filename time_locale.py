@@ -19,9 +19,9 @@ logging.basicConfig(
 
 # Commands for time, locale, and timezone settings
 commands = [
-    "sudo timedatectl set-ntp true",
-    "sudo timedatectl set-timezone Asia/Kolkata",
-    "sudo localectl set-keymap us",
+    "sudo -S timedatectl set-ntp true",
+    "sudo -S timedatectl set-timezone Asia/Kolkata",
+    "sudo -S localectl set-keymap us",
 ]
 
 
@@ -45,9 +45,12 @@ def execute_commands(client):
         logging.info(f"Executing: {command}")
         print(f"Executing: {command}")
         stdin, stdout, stderr = client.exec_command(command)
-        # Send password for sudo commands if prompted
+
+        # Write password for sudo if prompted
         stdin.write(SSH_PASSWORD + "\n")
         stdin.flush()
+
+        # Check if command succeeded
         if stdout.channel.recv_exit_status() == 0:
             output = stdout.read().decode().strip()
             logging.info(f"Success: {command}\nOutput: {output}")

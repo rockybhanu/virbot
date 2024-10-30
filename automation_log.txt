@@ -1,0 +1,94 @@
+2024-10-30 15:39:05,475 - DEBUG - starting thread (client mode): 0xf3379e50
+2024-10-30 15:39:05,475 - DEBUG - Local version/idstring: SSH-2.0-paramiko_3.5.0
+2024-10-30 15:39:05,479 - DEBUG - Remote version/idstring: SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.11
+2024-10-30 15:39:05,479 - INFO - Connected (version 2.0, client OpenSSH_8.2p1)
+2024-10-30 15:39:05,479 - DEBUG - === Key exchange possibilities ===
+2024-10-30 15:39:05,479 - DEBUG - kex algos: curve25519-sha256, curve25519-sha256@libssh.org, ecdh-sha2-nistp256, ecdh-sha2-nistp384, ecdh-sha2-nistp521, diffie-hellman-group-exchange-sha256, diffie-hellman-group16-sha512, diffie-hellman-group18-sha512, diffie-hellman-group14-sha256, kex-strict-s-v00@openssh.com
+2024-10-30 15:39:05,479 - DEBUG - server key: rsa-sha2-512, rsa-sha2-256, ssh-rsa, ecdsa-sha2-nistp256, ssh-ed25519
+2024-10-30 15:39:05,479 - DEBUG - client encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+2024-10-30 15:39:05,479 - DEBUG - server encrypt: chacha20-poly1305@openssh.com, aes128-ctr, aes192-ctr, aes256-ctr, aes128-gcm@openssh.com, aes256-gcm@openssh.com
+2024-10-30 15:39:05,479 - DEBUG - client mac: umac-64-etm@openssh.com, umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com, hmac-sha1-etm@openssh.com, umac-64@openssh.com, umac-128@openssh.com, hmac-sha2-256, hmac-sha2-512, hmac-sha1
+2024-10-30 15:39:05,479 - DEBUG - server mac: umac-64-etm@openssh.com, umac-128-etm@openssh.com, hmac-sha2-256-etm@openssh.com, hmac-sha2-512-etm@openssh.com, hmac-sha1-etm@openssh.com, umac-64@openssh.com, umac-128@openssh.com, hmac-sha2-256, hmac-sha2-512, hmac-sha1
+2024-10-30 15:39:05,479 - DEBUG - client compress: none, zlib@openssh.com
+2024-10-30 15:39:05,479 - DEBUG - server compress: none, zlib@openssh.com
+2024-10-30 15:39:05,480 - DEBUG - client lang: <none>
+2024-10-30 15:39:05,480 - DEBUG - server lang: <none>
+2024-10-30 15:39:05,480 - DEBUG - kex follows: False
+2024-10-30 15:39:05,480 - DEBUG - === Key exchange agreements ===
+2024-10-30 15:39:05,480 - DEBUG - Strict kex mode: True
+2024-10-30 15:39:05,480 - DEBUG - Kex: curve25519-sha256@libssh.org
+2024-10-30 15:39:05,480 - DEBUG - HostKey: ssh-ed25519
+2024-10-30 15:39:05,480 - DEBUG - Cipher: aes128-ctr
+2024-10-30 15:39:05,480 - DEBUG - MAC: hmac-sha2-256
+2024-10-30 15:39:05,480 - DEBUG - Compression: none
+2024-10-30 15:39:05,480 - DEBUG - === End of kex handshake ===
+2024-10-30 15:39:05,485 - DEBUG - Resetting outbound seqno after NEWKEYS due to strict mode
+2024-10-30 15:39:05,485 - DEBUG - kex engine KexCurve25519 specified hash_algo <built-in function openssl_sha256>
+2024-10-30 15:39:05,485 - DEBUG - Switch to new keys ...
+2024-10-30 15:39:05,485 - DEBUG - Resetting inbound seqno after NEWKEYS due to strict mode
+2024-10-30 15:39:05,485 - DEBUG - Adding ssh-ed25519 host key for 192.168.122.62: b'f1479a4f7b105a2fe1d6155fd88f53bc'
+2024-10-30 15:39:05,486 - DEBUG - Got EXT_INFO: {'server-sig-algs': b'ssh-ed25519,sk-ssh-ed25519@openssh.com,ssh-rsa,rsa-sha2-256,rsa-sha2-512,ssh-dss,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ecdsa-sha2-nistp256@openssh.com'}
+2024-10-30 15:39:05,486 - DEBUG - userauth is OK
+2024-10-30 15:39:05,493 - INFO - Authentication (password) successful!
+2024-10-30 15:39:05,493 - INFO - Connected to host
+2024-10-30 15:39:05,493 - INFO - Executing: sudo -S timedatectl set-ntp true
+2024-10-30 15:39:05,493 - DEBUG - [chan 0] Max packet in: 32768 bytes
+2024-10-30 15:39:05,688 - DEBUG - Received global request "hostkeys-00@openssh.com"
+2024-10-30 15:39:05,688 - DEBUG - Rejecting "hostkeys-00@openssh.com" global request from server.
+2024-10-30 15:39:05,731 - DEBUG - [chan 0] Max packet out: 32768 bytes
+2024-10-30 15:39:05,732 - DEBUG - Secsh channel 0 opened.
+2024-10-30 15:39:05,734 - DEBUG - [chan 0] Sesch channel 0 request ok
+2024-10-30 15:39:05,780 - DEBUG - [chan 0] EOF received (0)
+2024-10-30 15:39:05,780 - INFO - Success: sudo -S timedatectl set-ntp true
+Output: 
+2024-10-30 15:39:05,781 - DEBUG - [chan 0] EOF sent (0)
+2024-10-30 15:39:05,781 - INFO - Executing: sudo -S timedatectl set-timezone Asia/Kolkata
+2024-10-30 15:39:05,781 - DEBUG - [chan 1] Max packet in: 32768 bytes
+2024-10-30 15:39:05,824 - DEBUG - [chan 1] Max packet out: 32768 bytes
+2024-10-30 15:39:05,824 - DEBUG - Secsh channel 1 opened.
+2024-10-30 15:39:05,827 - DEBUG - [chan 1] Sesch channel 1 request ok
+2024-10-30 15:39:05,841 - DEBUG - [chan 1] EOF received (1)
+2024-10-30 15:39:05,841 - INFO - Success: sudo -S timedatectl set-timezone Asia/Kolkata
+Output: 
+2024-10-30 15:39:05,841 - INFO - Executing: sudo -S localectl set-keymap us
+2024-10-30 15:39:05,841 - DEBUG - [chan 2] Max packet in: 32768 bytes
+2024-10-30 15:39:05,841 - DEBUG - [chan 1] EOF sent (1)
+2024-10-30 15:39:05,842 - DEBUG - [chan 2] Max packet out: 32768 bytes
+2024-10-30 15:39:05,842 - DEBUG - Secsh channel 2 opened.
+2024-10-30 15:39:05,842 - DEBUG - [chan 2] Sesch channel 2 request ok
+2024-10-30 15:39:05,889 - DEBUG - [chan 2] EOF received (2)
+2024-10-30 15:39:05,889 - DEBUG - [chan 2] EOF sent (2)
+2024-10-30 15:39:05,890 - INFO - Success: sudo -S localectl set-keymap us
+Output: 
+2024-10-30 15:39:05,890 - INFO - 
+Verifying: timedatectl
+2024-10-30 15:39:05,890 - DEBUG - [chan 3] Max packet in: 32768 bytes
+2024-10-30 15:39:05,932 - DEBUG - [chan 3] Max packet out: 32768 bytes
+2024-10-30 15:39:05,932 - DEBUG - Secsh channel 3 opened.
+2024-10-30 15:39:05,934 - DEBUG - [chan 3] Sesch channel 3 request ok
+2024-10-30 15:39:05,944 - DEBUG - [chan 3] EOF received (3)
+2024-10-30 15:39:05,944 - DEBUG - [chan 3] EOF sent (3)
+2024-10-30 15:39:05,944 - INFO - Output of timedatectl:
+Local time: Wed 2024-10-30 15:39:05 IST
+           Universal time: Wed 2024-10-30 10:09:05 UTC
+                 RTC time: Wed 2024-10-30 10:09:06    
+                Time zone: Asia/Kolkata (IST, +0530)  
+System clock synchronized: yes                        
+              NTP service: active                     
+          RTC in local TZ: no
+2024-10-30 15:39:05,944 - INFO - 
+Verifying: localectl
+2024-10-30 15:39:05,944 - DEBUG - [chan 4] Max packet in: 32768 bytes
+2024-10-30 15:39:05,945 - DEBUG - [chan 4] Max packet out: 32768 bytes
+2024-10-30 15:39:05,945 - DEBUG - Secsh channel 4 opened.
+2024-10-30 15:39:05,946 - DEBUG - [chan 4] Sesch channel 4 request ok
+2024-10-30 15:39:05,949 - DEBUG - [chan 4] EOF received (4)
+2024-10-30 15:39:05,949 - DEBUG - [chan 4] EOF sent (4)
+2024-10-30 15:39:05,950 - INFO - Output of localectl:
+System Locale: LANG=en_US.UTF-8
+       VC Keymap: us
+      X11 Layout: us
+       X11 Model: pc105+inet
+     X11 Options: terminate:ctrl_alt_bksp
+2024-10-30 15:39:05,950 - DEBUG - Dropping user packet because connection is dead.
+2024-10-30 15:39:05,950 - INFO - Disconnected from host
