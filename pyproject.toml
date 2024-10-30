@@ -1,0 +1,11 @@
+[tool.black]
+line-length = 88
+target-version = ['py311']  # Matches your Python version 3.11
+exclude = '''
+/(
+    \.git
+    | \.venv
+    | venv
+    | __pycache__
+)/
+'''

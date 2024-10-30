@@ -1,0 +1,33 @@
+# Python bytecode and cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables file
+.env
+
+# VS Code workspace storage (but keep settings files)
+*.code-workspace
+
+# Python egg and build files
+*.egg-info/
+*.egg
+*.whl
+build/
+dist/
+
+# Logs
+*.log
+automation_log.txt  # Specific to your logging setup
+
+# Linting and Test Cache
+.mypy_cache/
+.pytest_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
