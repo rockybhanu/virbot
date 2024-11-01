@@ -62,15 +62,41 @@ def execute_commands(client):
 
 
 def verify_settings(client):
-    # Verify system settings for time, locale, and timezone
-    verify_commands = ["timedatectl", "localectl"]
-    for verify_command in verify_commands:
-        logging.info(f"\nVerifying: {verify_command}")
-        print(f"\nVerifying: {verify_command}")
-        stdin, stdout, stderr = client.exec_command(verify_command)
-        output = stdout.read().decode().strip()
-        logging.info(f"Output of {verify_command}:\n{output}")
-        print(output)
+    # Verify NTP setting
+    stdin, stdout, stderr = client.exec_command(
+        "timedatectl show --property=NTP --value"
+    )
+    ntp_status = stdout.read().decode().strip()
+    if ntp_status == "yes":
+        logging.info("NTP is enabled.")
+        print("NTP is enabled.")
+    else:
+        logging.error("NTP is not enabled.")
+        print("NTP is not enabled.")
+
+    # Verify timezone
+    stdin, stdout, stderr = client.exec_command(
+        "timedatectl show --property=Timezone --value"
+    )
+    timezone = stdout.read().decode().strip()
+    if timezone == "Asia/Kolkata":
+        logging.info("Timezone is correctly set to Asia/Kolkata.")
+        print("Timezone is correctly set to Asia/Kolkata.")
+    else:
+        logging.error(
+            f"Timezone is incorrect. Found {timezone} instead of Asia/Kolkata."
+        )
+        print(f"Timezone is incorrect. Found {timezone} instead of Asia/Kolkata.")
+
+    # Verify keymap
+    stdin, stdout, stderr = client.exec_command("localectl status")
+    localectl_output = stdout.read().decode().strip()
+    if "VC Keymap: us" in localectl_output:
+        logging.info("Keymap is correctly set to 'us'.")
+        print("Keymap is correctly set to 'us'.")
+    else:
+        logging.error("Keymap is not set to 'us'.")
+        print("Keymap is not set to 'us'.")
 
 
 def main():
